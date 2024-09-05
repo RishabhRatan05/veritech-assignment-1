@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --theme: #00308f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin-top: 2rem;
+}
+
+.divider1 {
+  display: flex;
+  rotate: 180deg;
+  transform: scaleY(-1);
+}
+.divider2 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+}
+
+.divider3 {
+  display: flex;
+  rotate: 180deg;
+  transform: scaleY(-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.box1 {
+  border: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--theme);
+}
+.box2 {
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 1.2rem solid var(--theme);
+  border-right: 1.2rem solid transparent;
+  border-bottom: 1.2rem solid var(--theme);
+
+  margin-bottom: 1vh;
+}
+
+@media screen and (max-width: 360px) {
+  .box1 {
+    border: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: var(--theme);
+  }
+  .box2 {
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 0.8rem solid var(--theme);
+    border-right: 0.8rem solid transparent;
+    border-bottom: 0.8rem solid var(--theme);
+
+    margin-bottom: 1vh;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.company_name {
+  font-size: 2rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--theme);
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.name {
+  text-align: center;
+  color: var(--theme);
+  font-weight: 600;
+}
+
+.position {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-style: italic;
+  color: #404040;
+}
+
+@media only screen and (max-width: 600px) {
+  .position {
+    font-size: 0.8rem;
+  }
+  .name {
+    font-size: 0.9rem;
+  }
+}
+
+.desc {
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 2rem 0;
+}
+
+.dotted_divider {
+  background: linear-gradient(to right, transparent 50%, #00308f 50%),
+    linear-gradient(to right, #ffffff, #ffffff);
+  background-size: 16px 2px, 100% 2px;
+  /* border-top: dotted 1rem; */
+  width: 40vw;
+  height: 2px;
+  margin-bottom: 2rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team_wrapper {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.team_heading {
+  width: fit-content;
+  color: white;
+  background-color: var(--theme);
+  font-size: 1.3rem;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 5vh;
+}
+@media only screen and (max-width: 600px) {
+  .team_heading {
+    font-size: 1.1rem;
+  }
+}
+
+.profile_pic {
+  width: 70%;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 22vw;
+  padding-top: 2px;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 1s ease;
+}
+
+.hero1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+
+  .hero1_row1 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .hero1_row2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+.hero2_row1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .hero2_row1 {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2vw;
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.hero2_row2 {
+  display: flex;
+  justify-content: space-around;
+}
